@@ -1,0 +1,13 @@
+{
+  "id": "BSD",
+  "name": "By Sheer Design",
+  "author": ["BlitzOTIYP"],
+  "description": "Balatro Mod that adds various miscellanious and vanilla-adjacent content.",
+  "prefix": "BSD",
+  "main_file": "BySheerDesign.lua",
+  "badge_colour": "7851A9",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0312b)"
+  ],
+  "version": "1.0.0"
+}

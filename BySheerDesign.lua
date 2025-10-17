@@ -12,10 +12,30 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+<<<<<<< HEAD
+=======
+  key = 'Sculio_Tags',
+  path = 'Tags.png',
+  px = 34,
+  py = 34
+}
+
+SMODS.Atlas {
+>>>>>>> 0c66dc8fcf0136f0f235e848c010239a15454e60
   key = 'BSDB',
   path = 'Decks.png',
   px = 69,
   py = 93
+<<<<<<< HEAD
+=======
+}
+
+SMODS.Atlas {
+  key = 'modicon',
+  path = 'Tags.png',
+  px = 34,
+  py = 34
+>>>>>>> 0c66dc8fcf0136f0f235e848c010239a15454e60
 }
 
 SMODS.current_mod.optional_features = function()

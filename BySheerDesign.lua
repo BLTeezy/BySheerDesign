@@ -12,17 +12,10 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-  key = 'Sculio_Tags',
-  path = 'Tags.png',
-  px = 34,
-  py = 34
-}
-
-SMODS.Atlas {
-  key = 'modicon',
-  path = 'Tags.png',
-  px = 34,
-  py = 34
+  key = 'BSDB',
+  path = 'Decks.png',
+  px = 69,
+  py = 93
 }
 
 SMODS.current_mod.optional_features = function()
@@ -31,15 +24,28 @@ SMODS.current_mod.optional_features = function()
   }
 end
 
-local subdir = 'jokers'
-local cards = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir)
+local subdir1 = 'jokers'
+local cards1 = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir1)
 
-table.sort(cards, function(a, b)
+table.sort(cards1, function(a, b)
   local a_num = tonumber(a:match('^(%d+)_')) or 0
   local b_num = tonumber(b:match('^(%d+)_')) or 0
   return a_num < b_num
 end)
 
-for _, filename in ipairs(cards) do
-  assert(SMODS.load_file(subdir .. '/' .. filename))()
+for _, filename in ipairs(cards1) do
+  assert(SMODS.load_file(subdir1 .. '/' .. filename))()
+end
+
+local subdir2 = 'backs'
+local cards2 = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir2)
+
+table.sort(cards2, function(a, b)
+  local a_num = tonumber(a:match('^(%d+)_')) or 0
+  local b_num = tonumber(b:match('^(%d+)_')) or 0
+  return a_num < b_num
+end)
+
+for _, filename in ipairs(cards2) do
+  assert(SMODS.load_file(subdir2 .. '/' .. filename))()
 end
